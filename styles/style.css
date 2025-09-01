@@ -2,4 +2,390 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+}
+
+.header {
+  font-family: var(--font-family);
+  block-size: 1vh;
+  min-block-size: 668px;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  width: 100%;
+  font-weight: bold;
+}
+
+.decorated-zone::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  justify-self: end;
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: var(--button-color);
+}
+
+.decorated-zone::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: var(--button-color);
+  margin-bottom: 10px;
+  align-self: end;
+}
+
+.header__rec {
+  display: var(--rec-display, none);
+  font-family: var(--font-family);
+  font-style: var(--font-style);
+  color: var(--accent-color);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.header__rec::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  border-radius: 50%;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-accent-color);
+  font-weight: 700;
+  line-height: 82.5%;
+  margin-block-end: 50px;
+}
+
+.title-decor {
+  display: grid;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--title-decor-text-color);
+  background-image: linear-gradient(
+    0deg,
+    transparent 0.1em,
+    var(--accent-color) 0.1em
+  );
+  font-family: var(--font-family);
+  max-block-size: 117px;
+  margin-bottom: 10px;
+}
+
+.header__theme-menu {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 75px;
+  margin-left: auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__theme-menu-list {
+  font-family: var(--font-family);
+  font-style: var(--font-style);
+  color: var(--button-color);
+}
+
+.header__theme-menu-button {
+  font-size: 18px;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: none;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border-style: outset;
+  border: 1px solid var(--button-color);
+  padding-inline: 13px;
+  padding-bottom: 6px;
+}
+
+.margin-for-front-page {
+  margin-block-end: 30px;
+}
+
+.container {
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+main {
+  background-color: var(--bg-color);
+}
+
+.section {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  padding-top: 40px;
+}
+
+.section__subtitle {
+  margin-top: 10px;
+}
+
+.section__content {
+  display: contents;
+}
+
+.title-questions {
+  display: grid;
+  font-family: var(--font-family);
+  font-style: var(--font-style);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--questions-color);
+  gap: 20px;
+}
+
+.main-text {
+  color: var(--title-decor-text-color);
+  font-family: var(--font-family);
+  font-style: var(--font-style);
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--main-text-color);
+}
+
+.title-decor-regular-weight {
+  margin-top: 20px;
+  display: grid;
+  font-style: var(--font-style);
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--title-decor-text-color);
+  background-color: var(--accent-color);
+  font-family: var(--font-family);
+  max-block-size: 23px;
+}
+
+.images {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  font-family: var(--font-family);
+  block-size: 1vh;
+  min-block-size: 668px;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer .header__title {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  align-content: center;
+}
+
+.link-to-study {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link-to-study:hover {
+  text-decoration: underline;
+  color: var(--main-text-color);
+}
+
+.link-to-study:focus-visible {
+  outline: 1px solid var(--main-text-color);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header {
+    min-block-size: 1024px;
+  }
+
+  .header__rec {
+    top: 20px;
+  }
+
+  .header__rec::after {
+    top: 20px;
+  }
+
+  .header__title {
+    margin-left: -20px;
+  }
+
+  .header__description {
+    margin-left: 384px;
+  }
+
+  .decorated-zone::before {
+    margin-top: 20px;
+  }
+
+  .decorated-zone::after {
+    margin-bottom: 20px;
+    align-self: end;
+  }
+
+  .food {
+    margin-top: 10px;
+  }
+
+  .section--attention .title-questions {
+    max-inline-size: 200px;
+  }
+
+  .section__why {
+    grid-template-columns: 236px 1fr;
+  }
+
+  .section__why .section__content {
+    display: block;
+  }
+
+  .title-decor-regular-weight {
+    margin-bottom: 10px;
+  }
+
+  .section__how {
+    grid-template-columns: 236px 1fr;
+  }
+
+  .section__how .section__content {
+    display: block;
+  }
+
+  .section__subtitle {
+    margin-bottom: 20px;
+  }
+
+  .section__show {
+    display: block;
+  }
+
+  .images {
+    width: 100%;
+    height: 100%;
+  }
+
+  .sunset {
+    grid-area: sunset;
+  }
+
+  .ice-cream {
+    grid-area: ice-cream;
+  }
+
+  .books {
+    grid-area: books;
+  }
+
+  .tape {
+    grid-area: tape;
+  }
+
+  .street {
+    grid-area: street;
+  }
+
+  .section__images {
+    display: grid;
+    grid-area: content;
+    gap: 20px;
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+
+  .footer {
+    display: grid;
+    font-family: var(--font-family);
+    block-size: 1vh;
+    min-block-size: 1024px;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header .header__theme-menu {
+    display: flex;
+    text-align: center;
+    margin-left: 0px;
+    align-items: center;
+    margin-top: -160px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .header__rec {
+    top: 20px;
+    right: 30px;
+  }
+
+  .header__rec::after {
+    top: 20px;
+  }
+
+  .header .header__description {
+    block-size: 4em;
+  }
+
+  .section--attention {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .section--attention .title-questions {
+    grid-column: 1/-1;
+  }
+
+  .section--attention .section__content {
+    display: block;
+  }
 }
