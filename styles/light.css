@@ -16,6 +16,7 @@
   --title-decor-text-color: #353430;
   --main-text-color: #353430;
   --button-color: #353430;
+  --button-color-hover: #32312d66;
   --questions-color: #353430;
 
   .header__rec {
@@ -32,6 +33,7 @@
     --title-decor-text-color: #353430;
     --main-text-color: #353430;
     --button-color: #353430;
+    --button-color-hover: #32312d66;
     --questions-color: #353430;
   }
 
