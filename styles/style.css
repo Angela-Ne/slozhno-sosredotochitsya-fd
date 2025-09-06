@@ -113,18 +113,18 @@
   border-width: 1px;
   border-color: transparent;
   border-style: none;
-  padding-block: 8px;
   text-align: center;
   cursor: pointer;
   width: 100%;
+  border: 1px solid transparent;
+  padding-inline: 13px;
+  margin-bottom: 8px;
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
   border-style: outset;
   border: 1px solid var(--button-color);
-  padding-inline: 13px;
-  padding-bottom: 6px;
 }
 
 .header__theme-menu-button:hover {
@@ -133,6 +133,10 @@
 }
 
 .header__theme-menu-button:focus-visible {
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
   border-bottom: 1px solid var(--button-color);
 }
 
@@ -155,7 +159,7 @@ main {
   gap: 10px;
   grid-template-columns: 1fr;
   padding-top: 43px;
-  padding-bottom: 10px;
+  margin-bottom: -5px;
 }
 
 .section__subtitle {
@@ -186,14 +190,14 @@ main {
   color: var(--main-text-color);
 }
 
-.main-text p {
-  margin-bottom: 10px;
+p {
+  padding-bottom: 10px;
 }
 
 .title-decor-regular-weight {
-  margin-top: 15px;
+  margin-top: 3px;
   display: grid;
-  font-style: var(--font-style);
+  font-weight: 400;
   font-size: 18px;
   line-height: 130%;
   color: var(--title-decor-text-color);
@@ -202,13 +206,8 @@ main {
   max-block-size: 23px;
 }
 
-.advice {
-  margin-top: 10px;
-  margin-bottom: -7px;
-}
-
 .template__show {
-  padding-top: 23px;
+  padding-top: 35px;
 }
 
 .images {
@@ -271,6 +270,7 @@ main {
 
   .header__rec {
     top: 20px;
+    margin-right: 10px;
   }
 
   .header__rec::after {
@@ -287,6 +287,10 @@ main {
     margin-left: -20px;
   }
 
+  .focus-title--footer {
+    margin-left: -10px;
+  }
+
   .header__description {
     margin-left: 365px;
   }
@@ -301,11 +305,34 @@ main {
   }
 
   .section {
+    gap: 0px;
+    padding-bottom: 10px;
     padding-top: 60px;
   }
 
-  .food {
-    margin-top: 10px;
+  .section__subtitle {
+    margin-top: 0px;
+  }
+
+  .section__images {
+    margin-top: 20px;
+  }
+
+  .main-text {
+    padding-top: 12px;
+    padding-bottom: 15px;
+  }
+
+  .title-decor--advice {
+    margin-bottom: 20px;
+  }
+
+  .main-text--advice {
+    padding-top: 0px;
+  }
+
+  .title-questions {
+    margin-bottom: 20px;
   }
 
   .template__attention .title-questions {
@@ -314,6 +341,7 @@ main {
 
   .template__why {
     grid-template-columns: 236px 1fr;
+    gap: 20px;
   }
 
   .template__why .section__content {
@@ -321,7 +349,7 @@ main {
   }
 
   .title-decor-regular-weight {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   .template__how {
@@ -333,15 +361,13 @@ main {
     display: block;
   }
 
-  .section__subtitle {
-    margin-bottom: 12px;
-  }
-
   .template__show {
     display: block;
   }
 
   .images {
+    object-fit: cover;
+    object-position: center;
     width: 100%;
     height: 100%;
   }
@@ -396,16 +422,22 @@ main {
     min-block-size: 768px;
   }
 
+  .header__theme-menu-button {
+    padding-block: 0px;
+    border: 1px solid transparent;
+    padding-inline: 7px;
+  }
+
   .header .header__theme-menu {
     display: flex;
     text-align: center;
     margin-left: 0px;
     align-items: center;
-    margin-top: -65px;
+    margin-top: -55px;
   }
 
   .focus-title {
-    font-size: 10rem;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-block-start: 215px;
     margin-block-end: -10px;
   }
@@ -419,6 +451,12 @@ main {
     display: flex;
     flex-direction: row;
     gap: 20px;
+  }
+
+  .main-text {
+    margin-top: 13px;
+    padding-top: 0px;
+    padding-bottom: 15px;
   }
 
   .header__rec {
@@ -439,18 +477,19 @@ main {
   }
 
   .template__how {
-    margin-top: 10px;
     grid-template-columns: 320px 1fr;
     gap: 20px;
   }
 
   .template__why {
     grid-template-columns: 325px 1fr;
+    gap: 10px;
   }
 
   .template__attention {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
   }
 
   .section__subtitle {
@@ -467,5 +506,9 @@ main {
 
   .footer {
     min-block-size: 668px;
+  }
+
+  .focus-title--footer {
+    margin-left: 0px;
   }
 }
