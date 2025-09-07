@@ -137,6 +137,7 @@
   padding-left: 0px;
   padding-bottom: 0px;
   padding-right: 0px;
+  outline: none;
   border-bottom: 1px solid var(--button-color);
 }
 
@@ -323,11 +324,11 @@ p {
     padding-bottom: 15px;
   }
 
-  .title-decor--advice {
+  .title-decor_advice {
     margin-bottom: 20px;
   }
 
-  .main-text--advice {
+  .main-text_advice {
     padding-top: 0px;
   }
 
@@ -424,7 +425,6 @@ p {
 
   .header__theme-menu-button {
     padding-block: 0px;
-    border: 1px solid transparent;
     padding-inline: 7px;
   }
 
